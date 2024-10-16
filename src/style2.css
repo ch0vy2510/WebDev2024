@@ -453,7 +453,85 @@ body {
 	color: var(--dark);	
 }
 /*Table left*/
-#content main .table-data {
+#content main .data { /*tạo khoảng cách giữa nội dung sales report với các mục lẻ ở trên*/
+	display: flex;
+	grid-gap: 20px;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+#content main .data .content-data { /*Tạo khung cho mục biểu đồ*/
+	flex-grow: 1;
+	flex-basis: 400px;
+	padding: 20px;
+	background: var(--light);
+	border-radius: 10px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+	color: var(--dark);
+}
+#content main .data .content-data .head { /*chuyển các thành phần của dấu ... sang bên phải*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+#content main .data .content-data .head h3 { /*tăng cỡ chữ Sales Report*/
+	font-size: 20px;
+	font-weight: 600;
+}
+#content main .data .content-data .head .menu { /*sắp xếp lại các thành phần edit save remove của ...*/
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content main .data .content-data .head .menu .material-icons-outlined {
+	cursor: pointer;
+} /*thêm chức năng pointer cho ...*/
+#content main .data .content-data .head .menu-link {
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	width: 140px;
+	background: var(--light);
+	border-radius: 10px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+	padding: 10px 0;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease;
+}/*Liên kết 3 thành phần edit,save,remove vào bên trong ...*/
+#content main .data .content-data .head .menu-link.show {
+	top: 100%;
+	opacity: 1;
+	pointer-events: visible;
+}/*Hiển thị các mục khi ấn vào ...*/
+#content main .data .content-data .head .menu-link a {
+	display: block;
+	padding: 6px 16px;
+	font-size: 14px;
+	color: var(--dark);
+	transition: all .3s ease;
+}/*căn chỉnh đổi màu lại các mục có trong ...*/
+#content main .data .content-data .head .menu-link a:hover {
+	background: var(--grey);
+}
+#content main .data .content-data .chart {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+#content main .data .content-data .chart::-webkit-scrollbar {
+	display: none;
+}
+/*end Table left*/
+/*Table right*/
+#content main .data .table-data {
+	flex-grow: 1;
+	flex-basis: 300px;
+}
+#content main .data .table-data {
 	display: flex;
 	flex-wrap: wrap;
 	grid-gap: 24px;
@@ -461,128 +539,158 @@ body {
 	width: 100%;
 	color: var(--dark);
 }
-
-#content main .table-data > div {
+#content main .data .table-data > div { /*tạo khung cho user inf*/
 	border-radius: 20px;
 	background: var(--light);
 	padding: 24px;
 	overflow-x: auto;
 }
-
-#content main .table-data .head {
+#content main .data .table-data .head {/*Để các biểu tượng trong phần tiêu đề cùng một hàng*/
 	display: flex;
 	align-items: center;
 	grid-gap: 16px;
 	margin-bottom: 24px;
 }
-
-#content main .table-data .head h3 {
+#content main .data .table-data .head h3 { /*Phóng to cỡ chữ user info*/
 	margin-right: auto;
 	font-size: 24px;
 	font-weight: 600;
 }
-
-#content main .table-data .head .material-icons-outlined {
+#content main .data .table-data .head .material-icons-outlined {
 	cursor: pointer;
-}
-
-#content main .table-data .order {
+}/*Tạo pointer cho biểu tượng bên phải user infor*/
+#content main .data .table-data .order { /*mở rộng khung của mục user infor*/
 	flex-grow: 1;
 	flex-basis: 500px;
 }
-
-#content main .table-data .order table {
+#content main .data .table-data .order table { /*Tạo khoảng cách cho cách tiêu đề user, date of bỉth, status*/
 	width: 100%;
 	border-collapse: collapse;
 }
-
-#content main .table-data .order table th {
+#content main .data .table-data .order table th { /*dóng lại thông tin của từng cột phù hợp với tiêu đề */
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
-
-#content main .table-data .order table td {
+#content main .data .table-data .order table td { /*Tạo khoảng cách các dòng nội dung của từng cột*/
 	padding: 16px 0;
 }
-
-#content main .table-data .order table tr td:first-child {
+#content main .data .table-data .order table tr td:first-child {
 	display: flex;
 	align-items: center;
 	grid-gap: 12px;
 	padding-left: 6px;
-}
-
-#content main .table-data .order table td img {
+} /*Tạo khoảng cách giữa biểu tượng và nội dung của từng cột*/
+#content main .data .table-data .order table td img {
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
 	object-fit: cover;
-}
-
-#content main .table-data .order table tbody tr:hover {
+}  /*Tạo hình tròn cho ảnh đại diện*/
+#content main .data .table-data .order table tbody tr:hover {
 	background: var(--grey);
-}
-
-#content main .table-data .order table tr td .status {
+}  /*Tạo hiệu ứng màu nền khi hover vào từng dòng*/
+#content main .data .table-data .order table tr td .status {
 	font-size: 10px;
 	padding: 6px 16px;
 	color: var(--light);
 	border-radius: 20px;
 	font-weight: 700;
-}
-
-#content main .table-data .order table tr td .status.completed {
+}  /*Tạo hiệu ứng màu nền cho trạng thái*/
+#content main .data .table-data .order table tr td .status.completed {
 	background: var(--blue);
-}
-
-#content main .table-data .order table tr td .status.process {
+}   /*Tạo hiệu ứng màu nền cho trạng thái đã hoàn thành*/
+#content main .data .table-data .order table tr td .status.process {
 	background: var(--violet);
-}
-
-#content main .table-data .order table tr td .status.pending {
+}   /*Tạo hiệu ứng màu nền cho trạng thái đang thực hiện*/
+#content main .data .table-data .order table tr td .status.pending {
 	background: var(--orange);
-}
-/*End Table left*/
+}    /*Tạo hiệu ứng màu nền cho trạng thái đang chờ*/
+/*End Table right*/
 
-/*Table right*/
-#content main .table-data .task {
+/*Under*/
+#content main .data1 .content-data1 {
+    margin-top: 40px; /* Add top margin */
+}
+#content main .data1 .content-data1 {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .data1 .content-data1 { /*Tạo khung cho mục biểu đồ*/
+	flex-grow: 1;
+	flex-basis: 400px;
+	padding: 20px;
+	background: var(--light);
+	border-radius: 10px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+}
+#content main .data1 .content-data1 .head1 h3 { 
+	font-size: 20px;
+	font-weight: 600;
+}
+#content main .data1 .content-data1 .head1 .menu-link1 a {
+	display: block;
+	padding: 6px 16px;
+	font-size: 14px;
+	color: var(--dark);
+	transition: all .3s ease;
+}/*căn chỉnh đổi màu lại các mục có trong ...*/
+#content main .data1 .content-data1 .head1 .menu-link1 a:hover {
+	background: var(--grey);
+}
+#content main .data1 .content-data1 .chart1 {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+#content main .data1 .content-data1 .chart1::-webkit-scrollbar {
+	display: none;
+}
+/*End Under*/
+/*Under2*/
+#content main .data1 .column {
 	flex-grow: 1;
 	flex-basis: 300px;
 }
-
-#content main .table-data .task .Checklist {
-	width: 100%;
-}
-
-#content main .table-data .task .Checklist li {
-	width: 100%;
-	margin-bottom: 16px;
-	background: var(--grey);
-	border-radius: 10px;
-	padding: 14px 20px;
+#content main .data1 .column {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .data1 .column > div { /*tạo khung cho user inf*/
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+}
+#content main .data1 .column .content-data2 .head2 h3 { /*Phóng to cỡ chữ user info*/
+	margin-right: auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+#content main .data1 .column .content-data2 { /*mở rộng khung của mục user infor*/
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+#content main .data1 .column .content-data2 .chart2 {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+#content main .data1 .column .content-data2 .chart2::-webkit-scrollbar {
+	display: none;
 }
 
-#content main .table-data .task .Checklist li .material-icons-outlined {
-	cursor: pointer;
-}
-
-#content main .table-data .task .Checklist li.completed {
-	border-left: 10px solid var(--blue);
-}
-
-#content main .table-data .task .Checklist li.not-completed {
-	border-left: 10px solid var(--orange);
-}
-
-#content main .table-data .task .Checklist li:last-child {
-	margin-bottom: 0;
-}
-/*End Table right*/
 /*MAIN*/
 
 /*CONTENT*/

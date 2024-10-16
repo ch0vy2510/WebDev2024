@@ -161,100 +161,109 @@
 
 			</ul>
 
-			<div class="table-data">
-				<div class="order">
+			<div class="data"> <!--Biểu đồ-->
+				<div class="content-data">
 					<div class="head">
-						<h3>User Information</h3>
-						<span class="material-icons-outlined">search</span>
-						<span class="material-icons-outlined">filter_list</span>
+						<h3>Follower rate</h3>
+						<div class="menu">
+							<span class="material-icons-outlined">more_horiz</span>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>User</th>
-								<th>Date of Birth</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<img src="img/download (5).png">
-									<p>Stefani</p>
-								</td>
-								<td>28-03-1986</td>
-								<td><span class="status completed">Online</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/download (3).png">
-									<p>Suis</p>
-								</td>
-								<td>06-04-2017</td>
-								<td><span class="status pending">Offline</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/download (2).png">
-									<p>Alison</p>
-								</td>
-								<td>13-12-1989</td>
-								<td><span class="status process">Offline 30 days</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/download.png">
-									<p>Charli</p>
-								</td>
-								<td>02-08-1992</td>
-								<td><span class="status pending">Online 3 hours ago</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/download (1).png">
-									<p>Lana</p>
-								</td>
-								<td>21-06-1985</td>
-								<td><span class="status completed">Online</span></td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="chart">
+						<div id="followerChart"></div>
+					</div>
 				</div>
-				<div class="task">
-					<div class="head">
-						<h3>Checklists</h3>
-						<span class="material-icons-outlined">add_circle</span>
-						<span class="material-icons-outlined">sort</span>
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>User Information</h3>
+							<span class="material-icons-outlined">search</span>
+							<span class="material-icons-outlined">filter_list</span>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>User</th>
+									<th>Date of Birth</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="img/download (5).png">
+										<p>Stefani</p>
+									</td>
+									<td>28-03-1986</td>
+									<td><span class="status completed">Online</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="img/download (3).png">
+										<p>Suis</p>
+									</td>
+									<td>06-04-2017</td>
+									<td><span class="status pending">Offline</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="img/download (2).png">
+										<p>Alison</p>
+									</td>
+									<td>13-12-1989</td>
+									<td><span class="status process">Offline 30 days</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="img/download.png">
+										<p>Charli</p>
+									</td>
+									<td>02-08-1992</td>
+									<td><span class="status pending">Online 3 hours ago</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="img/download (1).png">
+										<p>Lana</p>
+									</td>
+									<td>21-06-1985</td>
+									<td><span class="status completed">Online</span></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-					<ul class="Checklist">
-						<li class="completed">
-							<p>Checklist</p>
-							<span class="material-icons-outlined">more_vert</span>
-						</li>
-						<li class="completed">
-							<p>Checklist</p>
-							<span class="material-icons-outlined">more_vert</span>
-						</li>
-						<li class="not-completed">
-							<p>Checklist</p>
-							<span class="material-icons-outlined">more_vert</span>
-						</li>
-						<li class="completed">
-							<p>Checklist</p>
-							<span class="material-icons-outlined">more_vert</span>
-						</li>
-						<li class="not-completed">
-							<p>Checklist</p>
-							<span class="material-icons-outlined">more_vert</span>
-						</li>
-					</ul>
+			    </div>
+			</div>
+
+			<div class="data1"> <!--Biểu đồ-->
+				<div class="content-data1">
+					<div class="head1">
+						<h3>Viewer</h3>
+					</div>
+					<div class="chart1">
+						<div id="viewerChart"></div>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="content-data2">
+						<div class="head2">
+							<h3>Profit</h3>
+					    </div>
+						<div class="chart2">
+							<div id="profitChart"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>
 	</section>
-
-
-
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="script2.js"></script>
 </body>
 </html>
