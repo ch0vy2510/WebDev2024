@@ -374,19 +374,6 @@ body {
 	pointer-events: unset;
 }
 
-#content main .head-title .btn-download {
-	height: 36px;
-	padding: 0 16px;
-	border-radius: 36px;
-	background: var(--blue);
-	color: var(--light);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	grid-gap: 10px;
-	font-weight: 500;
-}
-
 #content main .box-info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -414,31 +401,16 @@ body {
 }
 
 #content main .box-info li:nth-child(1) .material-icons-outlined {
-	background: var(--light-blue);
-	color: var(--blue);
-}
-
-#content main .box-info li:nth-child(2) .material-icons-outlined {
-	background: var(--light-yellow);
-	color: var(--yellow);
-}
-
-#content main .box-info li:nth-child(3) .material-icons-outlined {
-	background: var(--light-orange);
-	color: var(--orange);
-}
-
-#content main .box-info li:nth-child(4) .material-icons-outlined {
 	background: var(--light-violet);
 	color: var(--violet);
 }
 
-#content main .box-info li:nth-child(5) .material-icons-outlined {
+#content main .box-info li:nth-child(2) .material-icons-outlined {
 	background: var(--light-green);
 	color: var(--green);
 }
 
-#content main .box-info li:nth-child(6) .material-icons-outlined {
+#content main .box-info li:nth-child(3) .material-icons-outlined {
 	background: var(--light-teal);
 	color: var(--teal);
 }
@@ -526,6 +498,7 @@ body {
 	display: none;
 }
 /*end Table left*/
+
 /*Table right*/
 #content main .data .table-data {
 	flex-grow: 1;
@@ -534,9 +507,9 @@ body {
 #content main .data .table-data {
 	display: flex;
 	flex-wrap: wrap;
-	grid-gap: 24px;
-	margin-top: 24px;
-	width: 100%;
+	grid-gap: 14px;
+	margin-top: 14px;
+	width: 50%;
 	color: var(--dark);
 }
 #content main .data .table-data > div { /*tạo khung cho user inf*/
@@ -549,7 +522,7 @@ body {
 	display: flex;
 	align-items: center;
 	grid-gap: 16px;
-	margin-bottom: 24px;
+	margin-bottom: 14px;
 }
 #content main .data .table-data .head h3 { /*Phóng to cỡ chữ user info*/
 	margin-right: auto;
@@ -598,15 +571,13 @@ body {
 	border-radius: 20px;
 	font-weight: 700;
 }  /*Tạo hiệu ứng màu nền cho trạng thái*/
-#content main .data .table-data .order table tr td .status.completed {
+#content main .data .table-data .order table tr td .status.online {
 	background: var(--blue);
 }   /*Tạo hiệu ứng màu nền cho trạng thái đã hoàn thành*/
-#content main .data .table-data .order table tr td .status.process {
+#content main .data .table-data .order table tr td .status.offline {
 	background: var(--violet);
 }   /*Tạo hiệu ứng màu nền cho trạng thái đang thực hiện*/
-#content main .data .table-data .order table tr td .status.pending {
-	background: var(--orange);
-}    /*Tạo hiệu ứng màu nền cho trạng thái đang chờ*/
+  /*Tạo hiệu ứng màu nền cho trạng thái đang chờ*/
 /*End Table right*/
 
 /*Under*/
