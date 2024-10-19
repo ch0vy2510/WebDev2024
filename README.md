@@ -8,9 +8,11 @@ Students are expected to:
 * Push your commits regularly, with proper commit messages
 
 Student Info
-=======================
-
-* Name: Nguyen Khang Ninh
-* ID: BI12-341
-* Group ID: 15
+======================
 * Project Name: Social Media Dashboard
+* Name: Nguyen Khang Ninh BI12-341
+* Group ID: 15
+* Group Member:
+* Hoang Minh Tuan BI11-280
+* Trinh Tuan Tu BI11-279
+* Bui Dac Minh BI11-164
